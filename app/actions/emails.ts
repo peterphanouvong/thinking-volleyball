@@ -8,7 +8,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendTestEmail = async (props: { email: string }) => {
   try {
-    const buff = readFileSync("./public/StatSheet.pdf");
+    const buff = readFileSync("/StatSheet.pdf");
 
     const { data, error } = await resend.emails.send({
       from: "Thinking Volleyball <peter@sportrackr.com.au>",
